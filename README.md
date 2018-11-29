@@ -1,2 +1,2 @@
 # SML-exercises
-programm
+programming exercises for Standard ML programming language.
