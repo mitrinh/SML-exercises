@@ -50,8 +50,8 @@ fun occrHelper(nums, x : int, sum) : int =
 
 fun occr(nums, x) : int = occrHelper(nums,x,0);
 
-val Result = occr([1,2,3,1,7,123,213,1,32], 1);
-val Result = occr([1,2,3,1,7,123,213,1,32], 23);
+val occrResult = occr([1,2,3,1,7,123,213,1,32], 1);
+val occrResult = occr([1,2,3,1,7,123,213,1,32], 23);
 
 fun primesHelper(nums, primesList) : int list = 
     if(nums = []) then primesList
