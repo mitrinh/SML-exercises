@@ -11,7 +11,9 @@ fun primeHelper(x, divisor) : bool =
     else if (x mod divisor = 0) then false   
     else primeHelper(x, divisor + 1);
 
-fun prime(x) : bool = primeHelper(x, 2); 
+fun prime(x) : bool = 
+    if(x <= 1) then false
+    else primeHelper(x, 2); 
 
 fun gcd(x, y) : int =
     if (y = 0) then x
@@ -48,13 +50,21 @@ fun primeFactorsHelper(x, divisor, primeFactorsList) : int list =
 
 fun primeFactors(x) : int list = primeFactorsHelper(x, 2, []);
 
-print ("\n");
+print("\n");
 
-val factorResult = factor(3,4);
-val primeResult = prime(12);
-val gcdResult = gcd(12,24);
-val perfectResult = perfect(6);
-val amicableResult = amicable(12285, 14595);
-val occrResult = occr([1,2,3,1,7,123,213,1,32], 1);
-val primesResult = primes([2,3,12,17,21,23]);
-val primeFactorsResult = primeFactors(1238);
+(* global variables *)
+val x = 24;
+val y = 4;
+val nums = [1, 2, 3, 24, 7, 24, 213, 1, 32]; 
+
+print("\n");
+
+(* test methods here *)
+val factorResult = factor(x,y);
+val primeResult = prime(x);
+val gcdResult = gcd(x,y);
+val perfectResult = perfect(x);
+val amicableResult = amicable(x, y);
+val occrResult = occr(nums, x);
+val primesResult = primes(nums);
+val primeFactorsResult = primeFactors(x);
